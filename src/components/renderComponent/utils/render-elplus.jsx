@@ -2,7 +2,7 @@
  * @Author: zhuzhan && zz.209218@sieyuan.com
  * @Date: 2024-09-02 10:49:26
  * @LastEditors: zhuzhan && zz.209218@sieyuan.com
- * @LastEditTime: 2024-09-18 20:23:11
+ * @LastEditTime: 2024-09-23 19:02:34
  * @FilePath: /sy-low-code-ediotr/src/components/renderComponent/utils/render-elplus.jsx
  * @Description:
  *
@@ -19,6 +19,7 @@ const renderElComponent = (tag, apis, apiCollect) => {
 	}
 
 	const component = resolveComponent(tagName);
+	console.log(component);
 
 	//对props进行过滤
 	const validProps = {};

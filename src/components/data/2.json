@@ -36,7 +36,7 @@
 					"type": "ElementPlus",
 					"tagName": "el-col",
 					"props": {
-						"span": 5,
+						"span": 4,
 						"offset": 0
 					},
 					"customStyle": {
@@ -65,11 +65,11 @@
 								}
 							],
 							"data": {
+								"bindProp": {
+									"key": "data",
+									"type": "Array"
+								},
 								"initAPI": {
-									"bindProp": {
-										"key": "data",
-										"type": "Array"
-									},
 									"apiId": "api_1",
 									"param": {}
 								}
@@ -81,7 +81,7 @@
 					"type": "ElementPlus",
 					"tagName": "el-col",
 					"props": {
-						"span": 14,
+						"span": 16,
 						"offset": 0
 					},
 					"children": [
@@ -89,12 +89,12 @@
 							"type": "ElementPlus",
 							"tagName": "el-form",
 							"props": {
-								"model": {},
+								"model": "form1",
 								"rules": [],
 								"inline": true,
 								"label-position": "right",
 								"label-width": "50px",
-								"size": "large",
+								"size": "small",
 								"inline-message": false
 							},
 							"events": [],
@@ -105,13 +105,64 @@
 									"customStyle": {},
 									"props": {
 										"prop": "el-form-item-1",
-										"label": "123",
+										"label": "请输入名称",
 										"label-position": "left",
-										"label-width": "80px",
+										"label-width": "100px",
 										"required": false,
 										"rules": {}
 									},
-									"events": []
+									"children": [
+										{
+											"type": "ElementPlus",
+											"tagName": "el-input",
+											"props": {
+												"v-model": "form1.name",
+												"placeholder": "请选择"
+											}
+										}
+									]
+								},
+								{
+									"type": "ElementPlus",
+									"tagName": "el-form-item",
+									"customStyle": {},
+									"props": {
+										"prop": "el-form-item-2",
+										"label": "请选择数据",
+										"label-position": "left",
+										"label-width": "100px",
+										"required": false,
+										"rules": {}
+									},
+									"children": [
+										{
+											"type": "ElementPlus",
+											"tagName": "el-select",
+											"props": {
+												"v-model": "form1.test",
+												"placeholder": "请选择",
+												"style": "width:200px"
+											},
+											"children": [
+												{
+													"type": "ElementPlus",
+													"tagName": "el-option",
+													"props": {
+														"label": 123,
+														"value": 123
+													}
+												},
+												{
+													"type": "ElementPlus",
+													"tagName": "el-option",
+													"props": {
+														"label": 456,
+														"value": 456
+													}
+												}
+											]
+										}
+									]
 								}
 							]
 						}
