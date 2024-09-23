@@ -1,0 +1,123 @@
+{
+	"type": "page",
+	"title": "123",
+	"style": {
+		"backgroundImage": "",
+		"backgroundColor": "#fff",
+		"width": "1500px",
+		"height": "800px",
+		"overflow": "auto"
+	},
+	"apis": [
+		{
+			"name": "api1",
+			"id": "api_1",
+			"url": "https://10.17.196.46:8443/common/modelclassify/",
+			"method": "get",
+			"params": {}
+		}
+	],
+	"tags": [
+		{
+			"type": "ElementPlus",
+			"tagName": "el-row",
+			"props": {
+				"gutter": 0,
+				"justify": "center",
+				"align": "",
+				"tag": "div"
+			},
+			"customStyle": {
+				"height": "100%",
+				"overflow": "hidden"
+			},
+			"children": [
+				{
+					"type": "ElementPlus",
+					"tagName": "el-col",
+					"props": {
+						"span": 5,
+						"offset": 0
+					},
+					"customStyle": {
+						"height": "100%",
+						"overflow": "auto"
+					},
+					"children": [
+						{
+							"type": "ElementPlus",
+							"tagName": "el-tree",
+							"props": {
+								"empty-text": "暂无数据",
+								"props": {
+									"label": "name",
+									"children": "children"
+								}
+							},
+							"events": [
+								{
+									"type": "onClick",
+									"actions": {
+										"type": "updateComponentData",
+										"componentId": "",
+										"updateAPI": ""
+									}
+								}
+							],
+							"data": {
+								"initAPI": {
+									"bindProp": {
+										"key": "data",
+										"type": "Array"
+									},
+									"apiId": "api_1",
+									"param": {}
+								}
+							}
+						}
+					]
+				},
+				{
+					"type": "ElementPlus",
+					"tagName": "el-col",
+					"props": {
+						"span": 14,
+						"offset": 0
+					},
+					"children": [
+						{
+							"type": "ElementPlus",
+							"tagName": "el-form",
+							"props": {
+								"model": {},
+								"rules": [],
+								"inline": true,
+								"label-position": "right",
+								"label-width": "50px",
+								"size": "large",
+								"inline-message": false
+							},
+							"events": [],
+							"children": [
+								{
+									"type": "ElementPlus",
+									"tagName": "el-form-item",
+									"customStyle": {},
+									"props": {
+										"prop": "el-form-item-1",
+										"label": "123",
+										"label-position": "left",
+										"label-width": "80px",
+										"required": false,
+										"rules": {}
+									},
+									"events": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

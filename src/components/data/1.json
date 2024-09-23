@@ -1,0 +1,100 @@
+{
+	"type": "page",
+	"title": "123",
+	"backgroundImage": "",
+	"backgroundColor": "#fff",
+	"width": 1000,
+	"height": 600,
+	"tags": [
+		{
+			"type": "ElementPlus",
+			"tagName": "el-button",
+			"slots": [
+				{
+					"type": "text",
+					"value": "1234"
+				}
+			],
+			"props": {
+				"type": "primary",
+				"round": true,
+				"circle": false,
+				"disabled": false
+			},
+			"events": [
+				{
+					"type": "click",
+					"actions": [
+						{
+							"type": "apiQuery",
+							"api": "api1",
+							"response": {
+								"success": ""
+							}
+						},
+						{
+							"type": "updateData",
+							"api": "api1",
+							"componetId": "table-2"
+						}
+					]
+				}
+			],
+			"data": {}
+		},
+		{
+			"type": "ElementPlus",
+			"tagName": "el-button",
+			"id": "button-2",
+			"label": "测试456",
+			"props": {
+				"type": "success",
+				"round": false,
+				"circle": true,
+				"disabled": false,
+				"size": "default",
+				"plain": false,
+				"icon": "Share",
+				"link": false,
+				"text": true,
+				"bg": true
+			},
+			"actions": []
+		},
+		{
+			"type": "ElementPlus",
+			"tagName": "el-button",
+			"ref": "button-2",
+			"label": "测试789",
+			"props": {
+				"type": "danger",
+				"round": false,
+				"circle": false,
+				"disabled": false,
+				"size": "default",
+				"plain": false,
+				"icon": "",
+				"link": false,
+				"text": false,
+				"bg": false,
+				"loading": true,
+				"color": "#626aef"
+			},
+			"actions": [
+				{
+					"event": "click",
+					"data": "123",
+					"action": ""
+				}
+			]
+		}
+	],
+	"apis": [
+		{
+			"guid": "api-1",
+			"url": "",
+			"type": "get",
+			"params": {}
+		}
+	]
+}

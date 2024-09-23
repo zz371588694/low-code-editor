@@ -1,0 +1,57 @@
+{
+	"type": "page",
+	"title": "123",
+	"backgroundImage": "",
+	"backgroundColor": "#fff",
+	"width": 1000,
+	"height": 600,
+	"tags": [
+		{
+			"type": "ElementPlus",
+			"tagName": "el-button",
+			"id": "el-button_1",
+			"label": "测试123",
+			"internalStyle": {
+				"left": 100,
+				"top": 100
+			},
+			"customStyle": {
+				"width": 300,
+				"height": 100
+			},
+			"props": {
+				"type": "primary",
+				"round": true,
+				"circle": false,
+				"disabled": false,
+				"icon": "Edit"
+			},
+			"events": [
+				{
+					"type": "click",
+					"actions": [
+						{
+							"type": "api-query",
+							"api": "api1"
+						},
+						{
+							"type":"refreshData",
+							"componetId":"table-2"
+						}
+					]
+				}
+			],
+			"data": {
+                
+            }
+		}
+	],
+	"apis": [
+		{
+			"guid": "api-1",
+			"url": "",
+			"type": "get",
+			"params": {}
+		}
+	]
+}
